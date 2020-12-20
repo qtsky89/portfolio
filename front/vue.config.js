@@ -1,7 +1,7 @@
 let devEnv = require('./vue.config.local.js')
 
 module.exports = {
-  lintOnSave: false,
+  lintOnSave: true,
   runtimeCompiler: true,
   configureWebpack: config => {
     config.devtool = 'source-map'
