@@ -3,7 +3,13 @@
     <b-card class="port">
       <h1>Portfolio</h1>
       <hr />
-      <b-dropdown class="m-md-2" text="All"></b-dropdown>
+      <b-dropdown :text="dropdownText" variant="outline-primary">
+        <template v-for="g in dropdownGroup">
+          <b-dropdown-item :key="g" @click="dropdownClick(g)">
+            {{ g }}
+          </b-dropdown-item>
+        </template>
+      </b-dropdown>
     </b-card>
   </div>
 </template>
@@ -16,6 +22,17 @@ export default Vue.extend({
   name: "Home",
   components: {
     //HelloWorld
+  },
+  data() {
+    return {
+      dropdownText: "All",
+      dropdownGroup: ["All", "Company", "Personal"]
+    };
+  },
+  methods: {
+    dropdownClick(g: string) {
+      this.dropdownText = g;
+    }
   }
 });
 </script>
