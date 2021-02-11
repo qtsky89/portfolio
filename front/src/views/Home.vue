@@ -1,7 +1,7 @@
 <template>
   <div class="text-left">
     <b-card class="port">
-      <h1>Text</h1>
+      <h1>Wonhee Project</h1>
       <hr />
       <b-dropdown :text="dropdownText" variant="outline-primary">
         <template v-for="g in dropdownGroup">
@@ -14,17 +14,17 @@
       <br />
 
       <b-row>
-        <b-col cols="4" v-for="(list, idx) in docList" :key="idx">
+        <b-col cols="4" v-for="(doc, idx) in docList" :key="idx">
           <b-card-group deck>
             <b-card
               :idx="idx"
               class="mb-3"
               align="center"
-              img-src="https://picsum.photos/id/1/600/300"
-              img-top="true"
+              :img-src="doc.img"
+              img-top
               hover="true"
             >
-              <b-card-text>{{ list }}</b-card-text>
+              <b-card-text>{{ doc.name }}</b-card-text>
             </b-card>
           </b-card-group>
         </b-col>
@@ -46,7 +46,20 @@ export default Vue.extend({
     return {
       dropdownText: "All",
       dropdownGroup: ["All", "Company", "Personal"],
-      docList: ["p1", "p2", "p3", "p4", "p5"]
+      docList: [
+        {
+          name: "Naver ClouD Search",
+          img: "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/ClouS_Logo_Fullcolor1.png"
+        },
+        {
+          name: "Naver CI/CD Builder",
+          img: "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/CitruS_Logo_Fullcolor1.png"
+        },
+        {
+          name: "Naver Golang Search Library",
+          img: "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/CitruS_Logo_Fullcolor1.png"
+        }
+      ]
     };
   },
   methods: {
