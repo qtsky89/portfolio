@@ -36,7 +36,7 @@ export default {
   },
   data () {
     return {
-      markdownData: 'test'
+      markdownData: ''
     }
   },
   mounted () {
@@ -44,6 +44,7 @@ export default {
   },
   methods: {
     getDocument () {
+      this.markdownData = this.docName
       /*
       return this.$http.get(this.$store.state.DJANGO + '/api/v1/document/' + this.docName)
         .then((response) => {

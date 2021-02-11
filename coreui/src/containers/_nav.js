@@ -9,36 +9,36 @@ export default [
       {
         _name: 'CSidebarNavDropdown',
         name: 'Company',
-        route: '/document',
+        route: '/company',
         icon: 'cil-building',
         items: [
           {
             name: 'Golang Search Library',
-            to: '/document/gosas'
+            to: '/company/gosas'
           },
           {
             name: 'CI/CD Builder',
-            to: '/document/citrus'
+            to: '/company/citrus'
           },
           {
             name: 'Cloud Search',
-            to: '/document/clous'
+            to: '/company/clous'
           },
           {
             name: 'Search DevOps',
-            to: '/document/devops'
+            to: '/company/devops'
           },
         ]
       },
       {
         _name: 'CSidebarNavDropdown',
         name: 'Personal',
-        route: '/document',
+        route: '/personal',
         icon: 'cil-home',
         items: [
           {
             name: 'Portfolio',
-            to: '/document/portfolio'
+            to: '/personal/portfolio'
           },
         ]
       },
