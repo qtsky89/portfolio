@@ -6,7 +6,7 @@ const TheContainer = () => import('@/containers/TheContainer')
 
 // Views
 const Main = () => import('@/views/Main')
-const Document = () => import('@/views/document/Document')
+const Doc = () => import('@/views/document/Document')
 
 Vue.use(Router)
 
@@ -41,31 +41,31 @@ function configRoutes () {
           {
             path: 'gosas',
             name: 'gosas',
-            component: Document,
+            component: Doc,
             props: { docName: 'gosas' }
           },
           {
             path: 'citrus',
             name: 'citrus',
-            component: Document,
+            component: Doc,
             props: { docName: 'citrus' }
           },
           {
             path: 'clous',
             name: 'clous',
-            component: Document,
+            component: Doc,
             props: { docName: 'clous' }
           },
           {
             path: 'devops',
             name: 'devops',
-            component: Document,
+            component: Doc,
             props: { docName: 'devops' }
           },
           {
             path: 'portfolio',
             name: 'portfolio',
-            component: Document,
+            component: Doc,
             props: { docName: 'portfolio' }
           },
          ]
