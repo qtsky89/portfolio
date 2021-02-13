@@ -12,18 +12,21 @@
       <br />
 
       <b-row>
-        <b-col cols="4" v-for="(doc, idx) in docList" :key="idx">
+        <b-col md="12">
           <b-card-group deck>
-            <b-card
-              :idx="idx"
-              class="mb-3"
-              align="center"
-              :img-src="doc.img"
-              img-top
-              hover="true"
-            >
-              <b-card-text>{{ doc.name }}</b-card-text>
-            </b-card>
+            <template v-for="(doc, idx) in docList">
+              <b-card
+                :key="idx"
+                :idx="idx"
+                class="mb-3"
+                align="center"
+                :img-src="doc.img"
+                img-top
+                hover="true"
+              >
+                <b-card-text>{{ doc.name }}</b-card-text>
+              </b-card>
+            </template>
           </b-card-group>
         </b-col>
       </b-row>
@@ -32,12 +35,10 @@
 </template>
 
 <script>
-
 export default {
-  name: 'Main',
-  components: {
-  },
-  data () {
+  name: "Main",
+  components: {},
+  data() {
     return {
       dropdownText: "All",
       dropdownGroup: ["All", "Company", "Personal"],
@@ -53,17 +54,16 @@ export default {
         {
           name: "Golang Search Library",
           img: "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/CitruS_Logo_Fullcolor1.png"
-        }
-      ]
+        },
+      ],
     };
   },
   methods: {
     dropdownClick(g) {
       this.dropdownText = g;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
