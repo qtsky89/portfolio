@@ -12,23 +12,19 @@
       <br />
 
       <b-row>
-        <b-col md="12">
-          <b-card-group deck>
-            <template v-for="(doc, idx) in docList">
-              <b-card
-                :key="idx"
-                :idx="idx"
-                class="mb-3"
-                align="center"
-                :img-src="doc.img"
-                img-top
-                hover="true"
-              >
-                <b-card-text>{{ doc.name }}</b-card-text>
-              </b-card>
-            </template>
-          </b-card-group>
-        </b-col>
+        <template v-for="doc in docList">
+          <b-col md="4" sm="6" :key="doc.name">
+            <b-card
+              class="mb-3"
+              align="center"
+              :img-src="doc.img"
+              img-top
+              hover="true"
+            >
+              <b-card-text>{{ doc.name }}</b-card-text>
+            </b-card>
+          </b-col>
+        </template>
       </b-row>
     </b-card>
   </div>
@@ -45,15 +41,36 @@ export default {
       docList: [
         {
           name: "Cloud Search",
-          img: "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/ClouS_Logo_Fullcolor1.png"
+          img: "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/clous.png",
         },
         {
           name: "CI/CD Builder",
-          img: "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/CitruS_Logo_Fullcolor1.png"
+          img:
+            "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/citrus.png",
         },
         {
           name: "Golang Search Library",
-          img: "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/CitruS_Logo_Fullcolor1.png"
+          img: "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/gosas.png",
+        },
+        {
+          name: "Devp Ops",
+          img:
+            "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/devops.png",
+        },
+        {
+          name: "Portfolio",
+          img:
+            "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/portfolio.png",
+        },
+        {
+          name: "Portfolio",
+          img:
+            "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/portfolio.png",
+        },
+        {
+          name: "Portfolio",
+          img:
+            "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/portfolio.png",
         },
       ],
     };

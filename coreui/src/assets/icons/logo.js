@@ -1,7 +1,9 @@
 // Example of SVG converted to js array, so it can be used with CIcon.
-// the first argument is two last values of svg viewBox, 
+// the first argument is two last values of svg viewBox,
 // the second argument is the SVG content stripped of SVG tags
-export const logo = ['556 134',`
+export const logo = [
+  "556 134",
+  `
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 
@@ -136,4 +138,5 @@ export const logo = ['556 134',`
 	</g>
 </g>
 </svg>
-`]
+`,
+];

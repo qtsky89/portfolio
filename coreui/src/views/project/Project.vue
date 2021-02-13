@@ -3,10 +3,7 @@
     <b-row>
       <b-col md="12">
         <b-card>
-          <vue-markdown
-            class="vue-marked-custom"
-            :source="markdownData"
-          />
+          <vue-markdown class="vue-marked-custom" :source="markdownData" />
         </b-card>
       </b-col>
     </b-row>
@@ -14,37 +11,37 @@
 </template>
 
 <script>
-import VueMarkdown from 'vue-markdown'
-import Prism from 'prismjs/components/prism-core'
-import 'prismjs/components/prism-clike'
-import 'prismjs/components/prism-c'
-import 'prismjs/components/prism-cpp'
-import 'prismjs/components/prism-bash'
-import 'prismjs/components/prism-python'
-import 'prismjs/components/prism-diff'
+import VueMarkdown from "vue-markdown";
+import Prism from "prismjs/components/prism-core";
+import "prismjs/components/prism-clike";
+import "prismjs/components/prism-c";
+import "prismjs/components/prism-cpp";
+import "prismjs/components/prism-bash";
+import "prismjs/components/prism-python";
+import "prismjs/components/prism-diff";
 
 export default {
   components: {
-    VueMarkdown
+    VueMarkdown,
   },
   props: {
     docName: {
       type: String,
-      default: '',
-      required: true
-    }
+      default: "",
+      required: true,
+    },
   },
-  data () {
+  data() {
     return {
-      markdownData: ''
-    }
+      markdownData: "",
+    };
   },
-  mounted () {
-    this.getDocument()
+  mounted() {
+    this.getDocument();
   },
   methods: {
-    getDocument () {
-      this.markdownData = this.docName
+    getDocument() {
+      this.markdownData = this.docName;
       /*
       return this.$http.get(this.$store.state.DJANGO + '/api/v1/document/' + this.docName)
         .then((response) => {
@@ -56,13 +53,13 @@ export default {
         .catch((error) => {
           console.log(error)
         })*/
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-  @import '../../../node_modules/prismjs/themes/prism-tomorrow.css'
+@import "../../../node_modules/prismjs/themes/prism-tomorrow.css";
 </style>
 <style>
 .vue-marked-custom img {
