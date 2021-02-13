@@ -25,7 +25,7 @@ SECRET_KEY = '+t1vz0s_70agt%1d8-=3ie1imd7=1c!u=$n=6tej^&+-*75yvz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -118,3 +118,28 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': False
+        },
+    },
+    'formatters': {
+        'simple': {
+            'format': '[%(asctime)s] [%(process)d] [%(levelname)s] %(filename)s:%(lineno)d: %(message)s',
+            'datefmt': '%Y-%m-%d %H:%M:%S %z'
+        }
+    }
+}
