@@ -21,18 +21,18 @@ function configRoutes() {
   return [
     {
       path: "/",
-      redirect: "/main",
+      redirect: "/Main",
       name: "Home",
       component: TheContainer,
       children: [
         {
-          path: "main",
+          path: "Main",
           name: "Main",
           component: Main,
         },
         {
-          path: "company",
-          redirect: "/company/gosas",
+          path: "Company",
+          redirect: "/Company/Golang Search Library",
           name: "Company",
           component: {
             render(c) {
@@ -41,34 +41,34 @@ function configRoutes() {
           },
           children: [
             {
-              path: "gosas",
-              name: "gosas",
+              path: "Golang Search Library",
+              name: "Golang Search Library",
               component: Project,
-              props: { docName: "gosas" },
+              props: { name: "Golang Search Library" },
             },
             {
-              path: "citrus",
-              name: "citrus",
+              path: "CI CD Builder",
+              name: "CI CD Builder",
               component: Project,
-              props: { docName: "citrus" },
+              props: { name: "CI CD Builder" },
             },
             {
-              path: "clous",
-              name: "clous",
+              path: "Cloud Search",
+              name: "Cloud Search",
               component: Project,
-              props: { docName: "clous" },
+              props: { name: "Cloud Search" },
             },
             {
-              path: "devops",
-              name: "devops",
+              path: "Search DevOps",
+              name: "Search DevOps",
               component: Project,
-              props: { docName: "devops" },
+              props: { name: "Search DevOps" },
             },
           ],
         },
         {
-          path: "personal",
-          redirect: "/personal/portfolio",
+          path: "Personal",
+          redirect: "/Personal/Portfolio",
           name: "Personal",
           component: {
             render(c) {
@@ -77,10 +77,10 @@ function configRoutes() {
           },
           children: [
             {
-              path: "portfolio",
-              name: "portfolio",
+              path: "Portfolio",
+              name: "Portfolio",
               component: Project,
-              props: { docName: "portfolio" },
+              props: { name: "Portfolio" },
             },
           ],
         },

@@ -13,13 +13,14 @@
 
       <b-row>
         <template v-for="project in projects">
-          <b-col v-if="dropdownText === 'all' || project.constraint == dropdownText" md="4" sm="6" :key="project.name">
+          <b-col v-if="dropdownText === 'All' || project.constraint == dropdownText" md="4" sm="6" :key="project.name">
             <b-card
               class="mb-3"
               align="center"
               :img-src="project.image"
               img-top
               hover="true"
+              @click="projectClick(project)"
             >
               <b-card-text>{{ project.name }}</b-card-text>
             </b-card>
@@ -36,8 +37,8 @@ export default {
   components: {},
   data() {
     return {
-      dropdownText: "all",
-      dropdownGroup: ["all", "company", "personal"],
+      dropdownText: "All",
+      dropdownGroup: ["All", "Company", "Personal"],
       projects: [],
     };
   },
@@ -53,6 +54,9 @@ export default {
   methods: {
     dropdownClick(g) {
       this.dropdownText = g;
+    },
+    projectClick(project) {
+      this.$router.push(project.constraint + "/" + project.name);
     },
   },
 };

@@ -25,7 +25,7 @@ export default {
     VueMarkdown,
   },
   props: {
-    docName: {
+    name: {
       type: String,
       default: "",
       required: true,
@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     getDocument() {
-      this.markdownData = this.docName;
+      this.markdownData = this.name;
       /*
       return this.$http.get(this.$store.state.DJANGO + '/api/v1/document/' + this.docName)
         .then((response) => {
