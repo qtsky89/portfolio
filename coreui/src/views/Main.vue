@@ -20,6 +20,7 @@
               :img-src="project.image"
               img-top
               hover="true"
+              border-variant="default"
               @click="projectClick(project)"
             >
               <b-card-text>{{ project.name }}</b-card-text>
