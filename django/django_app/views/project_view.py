@@ -30,7 +30,7 @@ class ProjectView(View):
             project = Project(**data)
             project.save()
             logger.info(f'{data["name"]} is created with param {data}')
-            return JsonResponse({'code': 200, 'message': f'{data["name"]} is created'}, status=201)
+            return JsonResponse({'code': 201, 'message': f'{data["name"]} is created'}, status=201)
         except Exception as e:
             logger.error(e, exc_info=True)
             return JsonResponse({'code': 500, 'message': str(e)}, status=500)
@@ -53,6 +53,8 @@ class ProjectView(View):
         try:
             if kwargs['pk'] == '':
                 raise Exception('pk shouldn\'t be empty')
+            Project.objects.filter(pk=kwargs['pk']).delete()
+            logger.info(f'{kwargs["pk"]} is deleted')
             return JsonResponse({'code': 200, 'message': f'{kwargs["pk"]} is deleted'}, status=200)
         except Exception as e:
             logger.error(e, exc_info=True)
