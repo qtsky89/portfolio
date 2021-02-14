@@ -12,16 +12,16 @@
       <br />
 
       <b-row>
-        <template v-for="doc in docList">
-          <b-col md="4" sm="6" :key="doc.name">
+        <template v-for="project in projects">
+          <b-col v-if="dropdownText === 'all' || project.constraint == dropdownText" md="4" sm="6" :key="project.name">
             <b-card
               class="mb-3"
               align="center"
-              :img-src="doc.img"
+              :img-src="project.image"
               img-top
               hover="true"
             >
-              <b-card-text>{{ doc.name }}</b-card-text>
+              <b-card-text>{{ project.name }}</b-card-text>
             </b-card>
           </b-col>
         </template>
@@ -36,44 +36,19 @@ export default {
   components: {},
   data() {
     return {
-      dropdownText: "All",
-      dropdownGroup: ["All", "Company", "Personal"],
-      docList: [
-        {
-          name: "Cloud Search",
-          img: "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/clous.png",
-        },
-        {
-          name: "CI/CD Builder",
-          img:
-            "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/citrus.png",
-        },
-        {
-          name: "Golang Search Library",
-          img: "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/gosas.png",
-        },
-        {
-          name: "Devp Ops",
-          img:
-            "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/devops.png",
-        },
-        {
-          name: "Portfolio",
-          img:
-            "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/portfolio.png",
-        },
-        {
-          name: "Portfolio",
-          img:
-            "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/portfolio.png",
-        },
-        {
-          name: "Portfolio",
-          img:
-            "https://wonhee-image.s3.ap-northeast-2.amazonaws.com/portfolio.png",
-        },
-      ],
+      dropdownText: "all",
+      dropdownGroup: ["all", "company", "personal"],
+      projects: [],
     };
+  },
+  mounted() {
+    this.$axios.get(this.$store.state.DJANGO + "/api/v1/project")
+      .then((response) => {
+        this.projects = response.data["item"];
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   },
   methods: {
     dropdownClick(g) {

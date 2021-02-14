@@ -11,7 +11,7 @@ const Project = () => import("@/views/project/Project");
 Vue.use(Router);
 
 export default new Router({
-  mode: "hash", // https://router.vuejs.org/api/#mode
+  mode: "history",
   linkActiveClass: "active",
   scrollBehavior: () => ({ y: 0 }),
   routes: configRoutes(),

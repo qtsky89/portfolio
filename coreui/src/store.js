@@ -5,6 +5,7 @@ Vue.use(Vuex);
 const state = {
   sidebarShow: "responsive",
   sidebarMinimize: false,
+  DJANGO: ""
 };
 
 const mutations = {
