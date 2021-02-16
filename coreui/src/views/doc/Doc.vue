@@ -25,7 +25,7 @@ export default {
     VueMarkdown,
   },
   props: {
-    name: {
+    docName: {
       type: String,
       default: "",
       required: true,
@@ -41,18 +41,16 @@ export default {
   },
   methods: {
     getDocument() {
-      this.markdownData = this.name;
-      /*
-      return this.$http.get(this.$store.state.DJANGO + '/api/v1/document/' + this.docName)
+      return this.$axios.get(this.$store.state.DJANGO + "/api/v1/document/" + this.docName)
         .then((response) => {
-          this.markdownData = response.data
+          this.markdownData = response.data["item"];
           this.$nextTick(function () {
-            Prism.highlightAll()
-          })
+            Prism.highlightAll();
+          });
         })
         .catch((error) => {
-          console.log(error)
-        })*/
+          console.log(error);
+        });
     },
   },
 };

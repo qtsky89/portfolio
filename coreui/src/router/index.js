@@ -6,7 +6,7 @@ const TheContainer = () => import("@/containers/TheContainer");
 
 // Views
 const Main = () => import("@/views/Main");
-const Project = () => import("@/views/project/Project");
+const Doc = () => import("@/views/doc/Doc");
 
 Vue.use(Router);
 
@@ -43,26 +43,26 @@ function configRoutes() {
             {
               path: "Golang Search Library",
               name: "Golang Search Library",
-              component: Project,
-              props: { name: "Golang Search Library" },
+              component: Doc,
+              props: { docName: "gosas" },
             },
             {
               path: "CI CD Builder",
               name: "CI CD Builder",
-              component: Project,
-              props: { name: "CI CD Builder" },
+              component: Doc,
+              props: { docName: "citrus" },
             },
             {
               path: "Cloud Search",
               name: "Cloud Search",
-              component: Project,
-              props: { name: "Cloud Search" },
+              component: Doc,
+              props: { docName: "clous" },
             },
             {
               path: "Search DevOps",
               name: "Search DevOps",
-              component: Project,
-              props: { name: "Search DevOps" },
+              component: Doc,
+              props: { docName: "devops" },
             },
           ],
         },
@@ -79,8 +79,8 @@ function configRoutes() {
             {
               path: "Portfolio",
               name: "Portfolio",
-              component: Project,
-              props: { name: "Portfolio" },
+              component: Doc,
+              props: { docName: "portfolio" },
             },
           ],
         },

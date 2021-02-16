@@ -11,12 +11,12 @@ logger = logging.getLogger('django')
 class ProjectView(View):
     def get(self, request, *args, **kwargs):
         try:
+            data = None
             if kwargs['pk'] == '':
-                data = {'item': [model_to_dict(obj) for obj in Project.objects.all()]}
-                return JsonResponse(data, status=200)
+                data = [model_to_dict(obj) for obj in Project.objects.all()]
             else:
                 data = model_to_dict(Project.objects.get(pk=kwargs['pk']))
-                return JsonResponse(data, status=200)
+            return JsonResponse({'code': 200, 'item': data}, status=200)
         except Exception as e:
             logger.error(e, exc_info=True)
             return JsonResponse({'code': 500, 'message': str(e)}, status=500)

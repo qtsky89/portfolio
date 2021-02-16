@@ -31,7 +31,7 @@ class ProjectViewTestCase(TestCase):
         # read (update check)
         res = self.c.get(f'/api/v1/project/{data["name"]}', content_type='application/json')
         self.assertEqual(res.status_code, 200)
-        self.assertEqual(res.json()['constraint'], 'company')
+        self.assertEqual(res.json()['item']['constraint'], 'company')
 
         # delete
         res = self.c.delete(f'/api/v1/project/{data["name"]}', content_type='application/json')
