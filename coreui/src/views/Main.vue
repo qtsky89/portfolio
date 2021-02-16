@@ -13,17 +13,18 @@
 
       <b-row>
         <template v-for="project in projects">
-          <b-col v-if="dropdownText === 'All' || project.constraint == dropdownText" md="4" sm="6" :key="project.name">
+          <b-col v-if="dropdownText === 'All' || project.constraint == dropdownText"
+            md="4" sm="6" :key="project.name">
             <b-card
-              class="mb-3"
+              :ref="project.name"
+              class="mb-3 project"
               align="center"
               :img-src="project.image"
               img-top
-              hover="true"
               border-variant="default"
               @click="projectClick(project)"
             >
-              <b-card-text>{{ project.name }}</b-card-text>
+              <b-card-text class="project-text">{{ project.name }}</b-card-text>
             </b-card>
           </b-col>
         </template>
@@ -63,4 +64,15 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.project {
+  border: 1px solid;
+}
+.project:hover {
+  background: #4093d2;
+}
+.project-text {
+  font-weight: bold;
+  font-size: 20px;
+}
+</style>
