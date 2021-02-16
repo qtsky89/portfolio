@@ -14,7 +14,7 @@ class DocumentView(View):
             file_path = f'{settings.TEMPLATE_DIR}/{kwargs["pk"]}.md'
 
             if not glob(file_path):
-                error_msg = f'{file_path} is not found'
+                error_msg = f'{kwargs["pk"]} is not found'
                 logger.error(error_msg)
                 return JsonResponse({'code': 400, 'message': error_msg}, status=400)
 
