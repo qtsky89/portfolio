@@ -34,10 +34,22 @@ export default {
   data() {
     return {
       markdownData: "",
+      autoLoader: null,
     };
   },
   mounted() {
     this.getDocument();
+    this.$nextTick(function () {
+      this.autoLoader = setInterval(() => {
+        this.getDocument();
+      }, 1000);
+    });
+  },
+  beforeDestroy() {
+    if (this.authorLoader) {
+      clearInterval(this.autoLoader);
+      this.autoLoader = null;
+    }
   },
   methods: {
     getDocument() {
