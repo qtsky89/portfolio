@@ -31,8 +31,8 @@ function configRoutes() {
           component: Main,
         },
         {
-          path: "Company",
-          redirect: "/Company/Golang Search Library",
+          path: "company",
+          redirect: "/company/gosas",
           name: "Company",
           component: {
             render(c) {
@@ -41,25 +41,25 @@ function configRoutes() {
           },
           children: [
             {
-              path: "Golang Search Library",
+              path: "gosas",
               name: "Golang Search Library",
               component: Doc,
               props: { docName: "gosas" },
             },
             {
-              path: "CI CD Builder",
+              path: "citrus",
               name: "CI CD Builder",
               component: Doc,
               props: { docName: "citrus" },
             },
             {
-              path: "Cloud Search",
+              path: "clous",
               name: "Cloud Search",
               component: Doc,
               props: { docName: "clous" },
             },
             {
-              path: "Search DevOps",
+              path: "devops",
               name: "Search DevOps",
               component: Doc,
               props: { docName: "devops" },
@@ -67,8 +67,8 @@ function configRoutes() {
           ],
         },
         {
-          path: "Personal",
-          redirect: "/Personal/Portfolio",
+          path: "personal",
+          redirect: "/personal/portfolio",
           name: "Personal",
           component: {
             render(c) {
@@ -77,7 +77,7 @@ function configRoutes() {
           },
           children: [
             {
-              path: "Portfolio",
+              path: "portfolio",
               name: "Portfolio",
               component: Doc,
               props: { docName: "portfolio" },
