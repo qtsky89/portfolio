@@ -3,7 +3,7 @@
 
 ## Summary
 * Goal: Make golang search library using swig and C++ search library
-* Main Tech: Swig, Golang, C++
+* Tech: Swig, Golang, C++
 * My part: Wrap C++ Search Library, Type change development, Performance test, Give presentation in workshop
 * Develop Duration: 6 month + @
 
