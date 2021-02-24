@@ -71,9 +71,13 @@ export default {
 <style lang="scss" scoped>
 @import "../../../node_modules/prismjs/themes/prism-tomorrow.css";
 </style>
-<style>
+<style lang="scss">
 .vue-marked-custom img {
   max-width: 100%;
   border: 1px solid lightgray;
+}
+.vue-marked-custom {
+  font-size: 1.3em !important;
+  line-height: 2em !important;
 }
 </style>
