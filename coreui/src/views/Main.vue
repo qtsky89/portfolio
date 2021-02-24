@@ -58,7 +58,7 @@ export default {
       this.dropdownText = g;
     },
     projectClick(project) {
-      this.$router.push(project.constraint + "/" + project.name);
+      this.$router.push(project.constraint + "/" + project.link);
     },
   },
 };

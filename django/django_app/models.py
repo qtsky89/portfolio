@@ -4,6 +4,7 @@ from django.utils import timezone
 
 class Project(models.Model):
     name = models.CharField(max_length=256, unique=True, primary_key=True)
+    link = models.CharField(max_length=4096, default='')
     image = models.CharField(max_length=4096, default='')
     constraint = models.CharField(max_length=256, default='')
     created_date = models.DateTimeField(default=timezone.now)
