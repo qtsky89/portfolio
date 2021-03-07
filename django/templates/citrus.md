@@ -24,11 +24,11 @@ I uploaded with core screenshots of our product.
 <img src="https://wonhee-image.s3.ap-northeast-2.amazonaws.com/citrus_dashboard.png" width="70%"/>
 <br><br>
 
-### Create
+### Service Create
 <img src="https://wonhee-image.s3.ap-northeast-2.amazonaws.com/citrus_create.png" width="70%"/>
 <br><br>
 
-### List
+### Service List
 <img src="https://wonhee-image.s3.ap-northeast-2.amazonaws.com/citrus_list.PNG" width="70%"/>
 <br><br>
 
