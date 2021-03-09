@@ -27,6 +27,7 @@
             <b-card
               :ref="project.name"
               class="mb-3 project"
+              style="cursor:pointer"
               align="center"
               :img-src="project.image"
               img-top
