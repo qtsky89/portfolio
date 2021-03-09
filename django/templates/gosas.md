@@ -4,12 +4,12 @@
 ## Summary
 * Goal: Make golang search library using swig and C++ search library
 * Tech: Swig, Golang, C++
-* My part: Wrap C++ Search Library, Type change development, Performance test, Give presentation in workshop
+* My part: Wrapping C++ Search Library, Develop type change, Performance test, Give presentation in workshop
 * Develop Duration: 6 month + @
 
 ## Detail
 My division are in charge of Search Application Server layer in Naver Search.
-We chose C++ apache module programming to build a Search Application Server layer just because of the performance.
+We chose C++ Apache module programming to build a Search Application Server layer just because of the performance.
 But nowadays there are tens of thousands of other options.
 Whole search department wanted to not only keep the performance but also experience high productivity using modern language.
 Search engine team only supported C++ library at that time so our team decided to wrap that library using swig.
