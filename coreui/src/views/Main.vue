@@ -1,20 +1,29 @@
 <template>
   <div>
     <b-card>
-      <b-dropdown :text="dropdownText" variant="outline-primary">
+      <b-dropdown
+        :text="dropdownText"
+        variant="outline-primary"
+      >
         <template v-for="g in dropdownGroup">
-          <b-dropdown-item :key="g" @click="dropdownClick(g)">
+          <b-dropdown-item
+            :key="g"
+            @click="dropdownClick(g)"
+          >
             {{ g }}
           </b-dropdown-item>
         </template>
       </b-dropdown>
-      <br />
-      <br />
+      <br><br>
 
       <b-row>
         <template v-for="project in projects">
-          <b-col v-if="dropdownText === 'All' || project.constraint == dropdownText"
-            md="4" sm="6" :key="project.name">
+          <b-col
+            v-if="dropdownText === 'All' || project.constraint == dropdownText"
+            :key="project.name"
+            md="4"
+            sm="6"
+          >
             <b-card
               :ref="project.name"
               class="mb-3 project"
@@ -24,7 +33,9 @@
               border-variant="default"
               @click="projectClick(project)"
             >
-              <b-card-text class="project-text">{{ project.name }}</b-card-text>
+              <b-card-text class="project-text">
+                {{ project.name }}
+              </b-card-text>
             </b-card>
           </b-col>
         </template>
@@ -35,33 +46,33 @@
 
 <script>
 export default {
-  name: "Main",
+  name: 'Main',
   components: {},
-  data() {
+  data () {
     return {
-      dropdownText: "All",
-      dropdownGroup: ["All", "Company", "Personal"],
-      projects: [],
-    };
+      dropdownText: 'All',
+      dropdownGroup: ['All', 'Company', 'Personal'],
+      projects: []
+    }
   },
-  mounted() {
-    this.$axios.get(this.$store.state.DJANGO + "/api/v1/project")
+  mounted () {
+    this.$axios.get(this.$store.state.DJANGO + '/api/v1/project')
       .then((response) => {
-        this.projects = response.data["item"];
+        this.projects = response.data['item']
       })
       .catch((error) => {
-        console.log(error);
-      });
+        console.log(error)
+      })
   },
   methods: {
-    dropdownClick(g) {
-      this.dropdownText = g;
+    dropdownClick (g) {
+      this.dropdownText = g
     },
-    projectClick(project) {
-      this.$router.push(project.constraint + "/" + project.link);
-    },
-  },
-};
+    projectClick (project) {
+      this.$router.push(project.constraint + '/' + project.link)
+    }
+  }
+}
 </script>
 
 <style scoped>

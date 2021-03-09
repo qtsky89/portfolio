@@ -39,11 +39,12 @@ export default {
   },
   mounted() {
     this.getDocument();
+    /* To develop
     this.$nextTick(function () {
       this.autoLoader = setInterval(() => {
         this.getDocument();
       }, 1000);
-    });
+    });*/
   },
   beforeDestroy() {
     if (this.authorLoader) {
