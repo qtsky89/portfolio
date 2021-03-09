@@ -3,7 +3,10 @@
     <b-row>
       <b-col md="12">
         <b-card>
-          <vue-markdown class="vue-marked-custom" :source="markdownData" />
+          <vue-markdown
+            class="vue-marked-custom"
+            :source="markdownData"
+          />
         </b-card>
       </b-col>
     </b-row>
@@ -11,62 +14,62 @@
 </template>
 
 <script>
-import VueMarkdown from "vue-markdown";
-import Prism from "prismjs/components/prism-core";
-import "prismjs/components/prism-clike";
-import "prismjs/components/prism-c";
-import "prismjs/components/prism-cpp";
-import "prismjs/components/prism-bash";
-import "prismjs/components/prism-python";
-import "prismjs/components/prism-diff";
+import VueMarkdown from 'vue-markdown'
+import Prism from 'prismjs/components/prism-core'
+import 'prismjs/components/prism-clike'
+import 'prismjs/components/prism-c'
+import 'prismjs/components/prism-cpp'
+import 'prismjs/components/prism-bash'
+import 'prismjs/components/prism-python'
+import 'prismjs/components/prism-diff'
 
 export default {
   components: {
-    VueMarkdown,
+    VueMarkdown
   },
   props: {
     docName: {
       type: String,
-      default: "",
-      required: true,
-    },
+      default: '',
+      required: true
+    }
   },
-  data() {
+  data () {
     return {
-      markdownData: "",
-      autoLoader: null,
-    };
+      markdownData: '',
+      autoLoader: null
+    }
   },
-  mounted() {
-    this.getDocument();
+  mounted () {
+    this.getDocument()
     /* To develop
     this.$nextTick(function () {
       this.autoLoader = setInterval(() => {
-        this.getDocument();
-      }, 1000);
-    });*/
+        this.getDocument()
+      }, 1000)
+    }) */
   },
-  beforeDestroy() {
+  beforeDestroy () {
     if (this.authorLoader) {
-      clearInterval(this.autoLoader);
-      this.autoLoader = null;
+      clearInterval(this.autoLoader)
+      this.autoLoader = null
     }
   },
   methods: {
-    getDocument() {
-      return this.$axios.get(this.$store.state.DJANGO + "/api/v1/document/" + this.docName)
+    getDocument () {
+      return this.$axios.get(this.$store.state.DJANGO + '/api/v1/document/' + this.docName)
         .then((response) => {
-          this.markdownData = response.data["item"];
+          this.markdownData = response.data['item']
           this.$nextTick(function () {
-            Prism.highlightAll();
-          });
+            Prism.highlightAll()
+          })
         })
         .catch((error) => {
-          console.log(error);
-        });
-    },
-  },
-};
+          console.log(error)
+        })
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
