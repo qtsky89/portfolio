@@ -12,7 +12,7 @@ Naver and line are consists of lots of service that needs high performance and c
 My job was to make those search service and maintaining it so customer could have nice experience.
 
 ## Result
-Have maintained lots of service like post, mail, dictionary, kin, app search without any series problems so far.
+Have maintained lots of service like post, mail, dictionary, intellectual, app search without any serious problems so far.
 
 ### Post Search
 <img src="https://wonhee-image.s3.ap-northeast-2.amazonaws.com/devops_post.png" width="80%">
