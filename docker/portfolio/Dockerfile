@@ -21,5 +21,9 @@ RUN cd /home1/irteam/apps/portfolio/coreui && \
 RUN chown irteam:irteam -R /home1/irteam/
 USER irteam
 
+RUN rm -f /tmp/mod_wsgi-localhost:30000:500/httpd.pid && \
+    source /home1/irteam/venv/bin/activate && \
+    /home1/irteam/apps/portfolio/django/manage.py runmodwsgi --port 8000
+
 #ENTRYPOINT ["sudo", "/home1/irteam/apps/apache/bin/apachectl"]
 #CMD ["-k", "start", "-D", "FOREGROUND"]
