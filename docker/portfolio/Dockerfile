@@ -8,6 +8,8 @@ ARG BRANCH="master"
 # set workdir
 WORKDIR /home1/irteam
 
+RUN echo "127.0.0.1 portfolio.wonhee.net portfoliob.wonhee.net" >> /etc/hosts
+
 # copy apache conf file
 COPY httpd.conf /home1/irteam/apps/apache/conf/httpd.conf
 
@@ -25,5 +27,5 @@ RUN cd /home1/irteam/apps/portfolio/coreui && \
 RUN chown irteam:irteam -R /home1/irteam/
 USER irteam
 
-#ENTRYPOINT ["sudo", "/home1/irteam/apps/apache/bin/apachectl"]
-#CMD ["-k", "start", "-D", "FOREGROUND"]
+ENTRYPOINT ["sudo", "/home1/irteam/apps/apache/bin/apachectl"]
+CMD ["-k", "start", "-D", "FOREGROUND"]

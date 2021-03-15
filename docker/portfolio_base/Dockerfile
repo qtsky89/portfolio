@@ -12,7 +12,7 @@ RUN localedef -i en_US -f UTF-8 en_US.UTF-8 && \
 # install package
 RUN yum -y install https://packages.endpoint.com/rhel/7/os/x86_64/endpoint-repo-1.7-1.x86_64.rpm
 RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash -
-RUN yum -y install sudo git nodejs rsync httpd-devel python3-devel gcc
+RUN yum -y install sudo git nodejs rsync apr-util python3
 RUN yum -y install http://www6.atomicorp.com/channels/atomic/centos/7/x86_64/RPMS/atomic-sqlite-sqlite-3.8.5-3.el7.art.x86_64.rpm
 RUN yum clean all
 
