@@ -36,7 +36,7 @@ RUN cd /home1/irteam/apps && \
 
 # npm package install
 COPY package.json /home1/irteam/work
-RUN npm install -g /home1/irteam/work/
+RUN npm install --prefix /home1/irteam/work /home1/irteam/work
 
 # python package install
 COPY requirements.txt /home1/irteam/work
