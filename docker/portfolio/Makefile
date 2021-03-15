@@ -19,6 +19,6 @@ exec:
 	docker exec -it portfolio bash
 
 clean:
-	docker rm -f $(IMAGE_NAME) || true
+	docker rm -f portfolio || true
 
 #vim: enc=utf-8 ts=4

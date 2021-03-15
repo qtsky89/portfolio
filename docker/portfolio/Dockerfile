@@ -20,3 +20,6 @@ RUN cd /home1/irteam/apps/portfolio/coreui && \
 
 RUN chown irteam:irteam -R /home1/irteam/
 USER irteam
+
+#ENTRYPOINT ["sudo", "/home1/irteam/apps/apache/bin/apachectl"]
+#CMD ["-k", "start", "-D", "FOREGROUND"]

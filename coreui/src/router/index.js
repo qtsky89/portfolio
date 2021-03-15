@@ -1,90 +1,89 @@
-import Vue from "vue";
-import Router from "vue-router";
+import Vue from 'vue'
+import Router from 'vue-router'
 
 // Containers
-const TheContainer = () => import("@/containers/TheContainer");
+const TheContainer = () => import('@/containers/TheContainer')
 
 // Views
-const Main = () => import("@/views/Main");
-const Doc = () => import("@/views/doc/Doc");
+const Main = () => import('@/views/Main')
+const Doc = () => import('@/views/doc/Doc')
 
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
-  mode: "history",
-  linkActiveClass: "active",
+  mode: 'history',
+  linkActiveClass: 'active',
   scrollBehavior: () => ({ y: 0 }),
-  routes: configRoutes(),
-});
+  routes: configRoutes()
+})
 
-function configRoutes() {
+function configRoutes () {
   return [
     {
-      path: "/",
-      redirect: "/Main",
-      name: "Home",
+      path: '/',
+      name: 'Home',
       component: TheContainer,
       children: [
         {
-          path: "Main",
-          name: "Main",
-          component: Main,
+          path: '',
+          name: 'Main',
+          component: Main
         },
         {
-          path: "company",
-          redirect: "/company/gosas",
-          name: "Company",
+          path: 'company',
+          redirect: '/company/gosas',
+          name: 'Company',
           component: {
-            render(c) {
-              return c("router-view");
-            },
+            render (c) {
+              return c('router-view')
+            }
           },
           children: [
             {
-              path: "gosas",
-              name: "Golang Search Library",
+              path: 'gosas',
+              name: 'Golang Search Library',
               component: Doc,
-              props: { docName: "gosas" },
+              props: { docName: 'gosas' }
             },
             {
-              path: "citrus",
-              name: "CI CD Builder",
+              path: 'citrus',
+              name: 'CI CD Builder',
               component: Doc,
-              props: { docName: "citrus" },
+              props: { docName: 'citrus' }
             },
             {
-              path: "clous",
-              name: "Cloud Search",
+              path: 'clous',
+              name: 'Cloud Search',
               component: Doc,
-              props: { docName: "clous" },
+              props: { docName: 'clous' }
             },
             {
-              path: "devops",
-              name: "Search DevOps",
+              path: 'devops',
+              name: 'Search DevOps',
               component: Doc,
-              props: { docName: "devops" },
-            },
-          ],
+              props: { docName: 'devops' }
+            }
+          ]
         },
         {
-          path: "personal",
-          redirect: "/personal/portfolio",
-          name: "Personal",
+          path: 'personal',
+          redirect: '/personal/portfolio',
+          name: 'Personal',
           component: {
-            render(c) {
-              return c("router-view");
-            },
+            render (c) {
+              return c('router-view')
+            }
           },
           children: [
             {
-              path: "portfolio",
-              name: "Portfolio",
+              path: 'portfolio',
+              name: 'Portfolio',
               component: Doc,
-              props: { docName: "portfolio" },
-            },
-          ],
-        },
-      ],
-    },
-  ];
+              props: { docName: 'portfolio' }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
