@@ -14,7 +14,7 @@ COPY vue.config.local.js /home1/irteam/apps/portfolio/coreui/vue.config.local.js
 
 # build vue
 RUN cd /home1/irteam/apps/portfolio/coreui && \
-    npm install && \
+    npm link && \
     npm run build && \
     rsync -av dist/* /home1/irteam/deploy/portfolio/
 
