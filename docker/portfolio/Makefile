@@ -9,7 +9,7 @@ IMAGE_NAME = qtsky89/portfolio
 all: build
 
 build:
-	docker build --no-cache -t $(IMAGE_NAME):$(VERSION) .
+	docker build --no-cache -t $(IMAGE_NAME):$(VERSION) --build-arg BRANCH=feature/issue3 .
 	docker push $(IMAGE_NAME):$(VERSION)
 
 run:

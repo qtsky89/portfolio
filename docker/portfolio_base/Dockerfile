@@ -2,14 +2,22 @@ FROM centos:7
 
 LABEL maintainer="Wonhee Jang <Qtsky89@gmail.com>"
 LABEL description="Dockerfile for portfolio"
-
-# install package, set irteam
 USER root
+
+# set locale charset and timezone
+RUN localedef -i en_US -f UTF-8 en_US.UTF-8 && \
+    localedef -i ko_KR -f UTF-8 ko_KR.UTF-8 && \
+    ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+
+# install package
 RUN yum -y install https://packages.endpoint.com/rhel/7/os/x86_64/endpoint-repo-1.7-1.x86_64.rpm
 RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash -
-RUN yum -y install sudo git httpd
+RUN yum -y install sudo git nodejs rsync
 RUN yum clean all
-RUN mkdir -p /etc/sudoers.d && \
+
+# set irteam
+RUN groupadd -g 500 irteam && \
+    useradd -l -K PASS_MAX_DAYS=-1 -m -u 500 -g 500 irteam && \
     echo "irteam ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/irteam && \
     chmod 0440 /etc/sudoers.d/irteam
 
