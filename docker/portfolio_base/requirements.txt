@@ -1,0 +1,17 @@
+asgiref==3.3.1
+Django==3.1.6
+django-cors-headers==3.7.0
+fancycompleter==0.9.1
+flake8==3.8.4
+importlib-metadata==3.4.0
+mccabe==0.6.1
+pdbpp==0.10.2
+pycodestyle==2.6.0
+pyflakes==2.2.0
+Pygments==2.7.4
+pyrepl==0.9.0
+pytz==2021.1
+sqlparse==0.4.1
+typing-extensions==3.7.4.3
+wmctrl==0.3
+zipp==3.4.0
