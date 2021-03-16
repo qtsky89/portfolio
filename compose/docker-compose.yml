@@ -1,0 +1,12 @@
+version: "3"
+services:
+    portfolio:
+        image: "qtsky89/portfolio:1.0.0"
+        ports:
+            - "80:80"
+        volumes:
+            - apache_logs:/home1/irteam/apache/logs
+        network_mode: "host"
+volumes:
+    apache_logs:
+        external: true

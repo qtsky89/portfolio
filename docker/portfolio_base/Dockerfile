@@ -7,6 +7,7 @@ USER root
 # set locale charset and timezone
 RUN localedef -i en_US -f UTF-8 en_US.UTF-8 && \
     localedef -i ko_KR -f UTF-8 ko_KR.UTF-8 && \
+    ln -sf /home /home1 && \
     ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 
 # install package
