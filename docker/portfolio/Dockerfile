@@ -19,10 +19,10 @@ COPY vue.config.local.js /home1/irteam/apps/portfolio/coreui/vue.config.local.js
 
 # build vue
 RUN cd /home1/irteam/apps/portfolio/coreui && \
-    rsync -av /home1/irteam/work/node_modules . && \
-    rsync -v /home1/irteam/work/package-lock.json . && \
+    mv /home1/irteam/work/node_modules . && \
+    mv /home1/irteam/work/package-lock.json . && \
     npm run build && \
-    rsync -av dist/* /home1/irteam/deploy/portfolio/
+    mv dist/* /home1/irteam/deploy/portfolio/
 
 RUN chown irteam:irteam -R /home1/irteam/
 USER irteam

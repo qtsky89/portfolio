@@ -4,12 +4,13 @@
 .PHONY: all build run exec clean
 
 VERSION = 1.0.0
+BRANCH=feature/issue3
 IMAGE_NAME = qtsky89/portfolio
 
 all: build
 
 build:
-	docker build --no-cache -t $(IMAGE_NAME):$(VERSION) --build-arg BRANCH=feature/issue3 .
+	docker build --no-cache -t $(IMAGE_NAME):$(VERSION) --build-arg BRANCH=$(BRANCH) .
 	docker push $(IMAGE_NAME):$(VERSION)
 
 run:
