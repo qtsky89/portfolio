@@ -6,7 +6,6 @@ services:
             - "80:80"
         volumes:
             - apache_logs:/home1/irteam/apache/logs
-        network_mode: "host"
 volumes:
     apache_logs:
         external: true
