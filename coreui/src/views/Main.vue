@@ -19,7 +19,7 @@
       <b-row>
         <template v-for="project in projects">
           <b-col
-            v-if="dropdownText === 'All' || project.constraint == dropdownText"
+            v-if="dropdownText === 'All' || project.constraint === dropdownText.toLowerCase()"
             :key="project.name"
             md="4"
             sm="6"
