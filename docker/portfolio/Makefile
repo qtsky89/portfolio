@@ -4,7 +4,7 @@
 .PHONY: all build run exec clean
 
 VERSION = 1.0.1
-BRANCH=feature/issue3
+BRANCH=master
 IMAGE_NAME = qtsky89/portfolio
 
 all: build
