@@ -3,7 +3,7 @@
 
 ## Summary
 * Goal: Develop portfolio document site
-* Tech: Vue.js, Django, AWS ( lightsail (container), S3 (storage), route 53 (domain) ), bootstrap, core-ui template
+* Tech: Vue.js, Django, MariaDB, AWS ( lightsail (container), S3 (storage), route 53 (domain) ), bootstrap, core-ui template
 * My part: Design architecture, Develop portfolio site, Serve site using AWS
 * Develop Duration: 2 months + @
 * Link: <a href="https://github.com/Qtsky89/portfolio">Github Repo</a>
