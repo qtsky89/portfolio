@@ -6,6 +6,7 @@ services:
             - "80:80"
         volumes:
             - apache_logs:/home1/irteam/apache/logs
+            - /home/irteam/apps/portfolio/django/django_project/my_settings.py:/home/irteam/apps/portfolio/django/django_project/my_settings.py
 volumes:
     apache_logs:
         external: true
