@@ -3,7 +3,7 @@
 
 ## Summary
 * Goal: Make automated CI / CD tool for Search Developer      
-* Tech: Vue.js, Django, Gin, K8S, Wetty, Jenkins, Sonarqube
+* Tech: Vue.js, Django, Gin, Kubernetes, MariaDB, Wetty, Jenkins, Sonarqube
 * My part: Design prototype of product, Develop service create wizard, Component dockerization and maintenance         
 * Develop Duration: 1 year + @
 

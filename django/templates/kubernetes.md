@@ -4,7 +4,7 @@
 
 ## Summary
 * Goal: Make Kubernetes search platform to handle big search service
-* Tech: Kubernetes, Helm Chart, Golang, MetalLB, Ceph Storage, Logstack, ArgoCD ...
+* Tech: Kubernetes, Helm Chart, Gin, MariaDB, MetalLB, Ceph Storage, Logstack, ArgoCD ...
 * My part: Create Service Wizard, LoadBalancer related feature, Migrate old service to this new platform, Test (A/B, Performance, Recovery)
 * Develop Duration: 12 months + @
 
