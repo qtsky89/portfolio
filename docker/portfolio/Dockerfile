@@ -1,4 +1,4 @@
-FROM qtsky89/portfolio_base:1.0.0
+FROM qtsky89/portfolio_base:1.1.0
 
 LABEL maintainer="Wonhee Jang <Qtsky89@gmail.com>"
 LABEL description="Dockerfile for portfolio"

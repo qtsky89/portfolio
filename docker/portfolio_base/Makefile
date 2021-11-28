@@ -3,7 +3,7 @@
 #
 .PHONY: all build run exec clean
 
-VERSION = 1.0.0
+VERSION = 1.1.0
 IMAGE_NAME = qtsky89/portfolio_base
 
 all: build
