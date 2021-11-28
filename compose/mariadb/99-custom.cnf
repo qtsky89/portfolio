@@ -1,0 +1,23 @@
+[client]
+default-character-set = utf8mb4
+
+[mysql]
+default-character-set = utf8mb4
+
+[mysqld]
+character-set-server = utf8mb4
+collation-server     = utf8mb4_unicode_ci
+
+# log setting
+[mysqld]
+# general log
+general_log = ON
+general_log_file = /var/lib/mysql/log/general.log
+
+# error log
+log-error=/var/lib/mysql/log/error.log
+
+# slow log
+slow_query_log = ON
+long_query_time = 10
+slow_query_log_file = /var/lib/mysql/log/slow.log
