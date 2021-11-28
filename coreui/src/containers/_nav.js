@@ -13,6 +13,10 @@ export default [
         icon: "cil-building",
         items: [
           {
+            name: "Kubernetes Search",
+            to: "/company/kubernetes",
+          },
+          {
             name: "Golang Search Library",
             to: "/company/gosas",
           },
