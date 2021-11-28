@@ -1,0 +1,31 @@
+version: "3.2"
+services:
+    portfolio_mariadb:
+        image: centos/mariadb-103-centos7
+        ports:
+            - "3308:3306"
+        restart: always
+        environment:
+            MYSQL_DATABASE: portfolio
+            MYSQL_USER: rw_portfolio
+            MYSQL_PASSWORD: ${MARIADB_PASSWORD}
+            MYSQL_ROOT_PASSWORD: ${MARIADB_PASSWORD}
+        volumes:
+            - ./99-custom.cnf:/etc/my.cnf.d/99-custom.cnf:Z
+            - portfolio_mariadb_data:/var/lib/mysql/data:Z
+            - portfolio_mariadb_logs:/var/lib/mysql/log:Z
+
+    portfolio_mariadb_admin:
+        image: phpmyadmin:5.1.1
+        ports:
+            - "3309:80"
+        environment:
+            PMA_HOST: portfolio_mariadb
+        restart: always
+        links:
+            - portfolio_mariadb
+volumes:
+    portfolio_mariadb_data:
+        external: true
+    portfolio_mariadb_logs:
+        external: true

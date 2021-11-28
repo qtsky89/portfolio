@@ -13,7 +13,7 @@ class ProjectView(View):
         try:
             data = None
             if kwargs['pk'] == '':
-                data = [model_to_dict(obj) for obj in Project.objects.all()]
+                data = [model_to_dict(obj) for obj in Project.objects.all().order_by('created_date')]
             else:
                 data = model_to_dict(Project.objects.get(pk=kwargs['pk']))
             return JsonResponse({'code': 200, 'item': data}, status=200)

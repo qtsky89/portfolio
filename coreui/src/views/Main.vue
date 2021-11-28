@@ -87,4 +87,8 @@ export default {
   font-weight: bold;
   font-size: 20px;
 }
+.card-img-top {
+  height: 11vw;
+  object-fit: contain;
+}
 </style>
