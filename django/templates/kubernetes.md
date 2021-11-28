@@ -9,7 +9,7 @@
 * Develop Duration: 12 months + @
 
 ## Detail
-[Cloud Search](https://portfolio.wonhee.net/company/clous) can cover a lot of devops issues but, It designed for small search services.
+ `Cloud Search` can cover a lot of devops issues but, It designed for small search services.
 Big search service like web search, cafe search, post search has a big search volume and has to deal with a lot of requets in short amount of time.
 I already have a search admin tool based on physical machine.
 Instead of using physical machine I used empty kubernetes pod, so I could use old admin tool and also leverage kubernetes cool feature.
