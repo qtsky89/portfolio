@@ -13,11 +13,8 @@ module.exports = {
     config.resolve.alias.set("__STATIC__", "static");
 
     config.devServer
-      .public("http://" + devEnv.devHost + ":" + devEnv.devPort)
       .host(devEnv.devHost)
       .port(devEnv.devPort)
-      .hotOnly(true)
-      .watchOptions({ poll: 1000 })
       .https(false)
       .headers({ "Access-Control-Allow-Origin": ["*"] });
   },
