@@ -40,12 +40,6 @@ function configRoutes () {
           },
           children: [
             {
-              path: 'kubernetes',
-              name: 'Kubernetes Search',
-              component: Doc,
-              props: { docName: 'kubernetes' }
-            },
-            {
               path: 'gosas',
               name: 'Golang Search Library',
               component: Doc,
