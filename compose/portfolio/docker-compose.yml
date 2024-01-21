@@ -1,7 +1,7 @@
 version: "3"
 services:
     portfolio:
-        image: "qtsky89/portfolio:1.2.0"
+        image: "qtsky89/portfolio:1.2.1"
         ports:
             - "80:80"
         volumes:
