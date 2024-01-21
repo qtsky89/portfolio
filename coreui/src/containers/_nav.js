@@ -13,16 +13,16 @@ export default [
         icon: 'cil-building',
         items: [
           {
-            name: 'Golang Search Library',
-            to: '/company/gosas'
+            name: 'Cloud Search',
+            to: '/company/clous'
           },
           {
             name: 'CI CD Builder',
             to: '/company/citrus'
           },
           {
-            name: 'Cloud Search',
-            to: '/company/clous'
+            name: 'Golang Search Library',
+            to: '/company/gosas'
           },
           {
             name: 'Search DevOps',
