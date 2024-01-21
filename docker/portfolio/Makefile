@@ -1,9 +1,9 @@
 # @file   Makefile
 # @author Wonhee Jang
 #
-.PHONY: all build run exec clean
+.PHONY: all build run exec clean push
 
-VERSION = 1.1.1
+VERSION = 1.2.0
 BRANCH=master
 IMAGE_NAME = qtsky89/portfolio
 
@@ -11,6 +11,8 @@ all: build
 
 build:
 	docker build --no-cache -t $(IMAGE_NAME):$(VERSION) --build-arg BRANCH=$(BRANCH) .
+
+push:
 	docker push $(IMAGE_NAME):$(VERSION)
 
 run:

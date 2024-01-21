@@ -1,24 +1,20 @@
 ## Architecture
-![gosas_architecture](https://wonhee-image.s3.ap-northeast-2.amazonaws.com/gosas_architecture.png)
+<img src="https://wonhee-gosas.s3.ap-northeast-2.amazonaws.com/gosas_architecture.png" width="80%">
+
 
 ## Summary
-* Goal: Make golang search library using swig and C++ search library
-* Tech: Swig, Golang, C++
-* My part: Wrapping C++ Search Library, Develop type change, Performance test, Give presentation in workshop
-* Develop Duration: 6 month + @
+- **Situation**: Naver search engine team only offers C++ library. I wanted to use other modern languages when making search logic for productivity.
+- **Task**: Wrap Naver search engine library, so search developers can leverage modern languages like Go lang.
+- **Action**: Wrapped term extractor, synonym finder, ebool parser part. Changed automatic machine language type to Golang slice, map. Set CI/CD pipeline. Keep maintained when new search engine feature comes out.
+- **Result**: There is no significant performance drop when changing from C++ to Go. And developers can make their search logic 2 times faster compared to C++. More than a hundred of Naver search service adopted this library. I announced that result in 2020 Naver's Engineering Day workshop.
+- **Tech Stack**: Swig, Golang, C++
+- **Duration**: 4 member, 1 yr+
 
-## Detail
-My division are in charge of Search Application Server layer in Naver Search.
-We chose C++ Apache module programming to build a Search Application Server layer just because of the performance.
-But nowadays there are tens of thousands of other options.
-Whole search department wanted to not only keep the performance but also experience high productivity using modern language.
-Search engine team only supported C++ library at that time so our team decided to wrap that library using swig.
+## Engineering day presentation
+* Delivered a presentation on the topic of Go Search Library in 2020 Naver's Engineering Day workshop.
+<img src="https://wonhee-gosas.s3.ap-northeast-2.amazonaws.com/gosas_engineeringday.png" width="80%">
 
-## Result
-![gosas_performance1](https://wonhee-image.s3.ap-northeast-2.amazonaws.com/gosas_performance1.png)
-![gosas_performance2](https://wonhee-image.s3.ap-northeast-2.amazonaws.com/gosas_performance2.png)
-
-We've proved our library use almost same system resource as original one.
-More than a 20 + @ Naver services have adopted Golang Search Library.
-(ex. Post Search, Review Search, Used Shopping Search, Help Search, Autocar Search, News Library Search, Uplus Search, Global News Search, Cloud Search, Art Search ...)
-Gave presentation in formal company workshop three times and got nice result. (Engineering Day 2020, N-innovation 2020, [Deview 2020](https://deview.kr/2020/sessions/379))
+## Performance compare (C++ vs Go)
+* There is no significant performance drop between C++, Go.
+<img src="https://wonhee-gosas.s3.ap-northeast-2.amazonaws.com/gosas_performance1.png" width="80%">
+<img src="https://wonhee-gosas.s3.ap-northeast-2.amazonaws.com/gosas_performance2.png" width="80%">
