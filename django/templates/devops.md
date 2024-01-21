@@ -1,34 +1,22 @@
 ## Architecture
-<img src="https://wonhee-image.s3.ap-northeast-2.amazonaws.com/devops_architecture.PNG" width="80%">
+<img src="https://wonhee-devops.s3.ap-northeast-2.amazonaws.com/devops_architecture.png" width="80%">
 
 ## Summary
-* Goal: Develop search application what clients needs in Naver, Line. And maintain that service.
-* Tech: C++, Apache module programming
-* My part: DevOps search application server (Post, Mail, Dictionary, Intellectual, App ...)
-* Develop Duration: My whole career (5 yrs + @)
+- **Situation**: Naver search system needs constant care to maintain Top IT company position in Korea.
+- **Task**: Develop and operate important search service.
+- **Action**: Since I entered this company, developed Naver search service that I'm in charge of. And I applied unit test, e2e test for every pull request. I maintained the code library state of the art. Settled alarm and monitoring system and handled appropriately when something happens.
+- **Result**: Always meets deadline and doesn’t have big failure in my services.
+- **Tech Stack**: Golang, C++, Apache module programming.
+- **Duration**: 1 member, 8yr ~ present
 
-## Detail
-Naver and line are consists of lots of service that needs high performance and complex demands.
-My job was to make those search service and maintaining it so customer could have nice experience.
-
-## Result
-Have maintained lots of service like post, mail, dictionary, intellectual, app search without any serious problems so far.
-
-### Post Search
-<img src="https://wonhee-image.s3.ap-northeast-2.amazonaws.com/devops_post.png" width="80%">
-<br/><br/>
-
-### Mail Search
-<img src="https://wonhee-image.s3.ap-northeast-2.amazonaws.com/devops_mail.PNG" width="80%">
-<br/><br/>
-
-### Dictionary Search
-<img src="https://wonhee-image.s3.ap-northeast-2.amazonaws.com/devops_dict.PNG" width="80%">
-<br/><br/>
-
-### Intellectual Search
-<img src="https://wonhee-image.s3.ap-northeast-2.amazonaws.com/devops_kin.PNG" width="80%">
-
-### App Search
-<img src="https://wonhee-image.s3.ap-northeast-2.amazonaws.com/devops_app.PNG" width="80%">
-<br/><br/>
+## Search logic that I'm in charge of
+* Post Search
+<img src="https://wonhee-devops.s3.ap-northeast-2.amazonaws.com/devops_post.png" width="80%">
+* Mail Search
+<img src="https://wonhee-devops.s3.ap-northeast-2.amazonaws.com/devops_post.png" width="80%">
+* Dictionary Search
+<img src="https://wonhee-devops.s3.ap-northeast-2.amazonaws.com/devops_dict.png" width="80%">
+* Intellectual Search
+<img src="https://wonhee-devops.s3.ap-northeast-2.amazonaws.com/devops_kin.png" width="80%">
+* App Search
+<img src="https://wonhee-devops.s3.ap-northeast-2.amazonaws.com/devops_app.png" width="80%">
