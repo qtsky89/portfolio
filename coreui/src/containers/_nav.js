@@ -49,7 +49,7 @@ export default [
       {
         _name: 'CSidebarNavItem',
         name: 'Resume',
-        href: 'https://wonhee-image.s3.ap-northeast-2.amazonaws.com/Resume.pdf',
+        href: 'https://wonhee-resume.s3.ap-northeast-2.amazonaws.com/Wonhee_Jang.pdf',
         icon: 'cil-file'
       },
       {

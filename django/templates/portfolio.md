@@ -1,15 +1,10 @@
 ## Architecture
-<img src="https://wonhee-image.s3.ap-northeast-2.amazonaws.com/portfolio_main.PNG" width="80%">
+<img src="https://wonhee-portfolio.s3.ap-northeast-2.amazonaws.com/portfolio.png" width="80%">
 
 ## Summary
-* Goal: Develop portfolio document site
-* Tech: Vue.js, Django, MariaDB, AWS ( lightsail (container), S3 (storage), route 53 (domain) ), bootstrap, core-ui template
-* My part: Design architecture, Develop portfolio site, Serve site using AWS
-* Develop Duration: 2 months + @
-* Link: <a href="https://github.com/Qtsky89/portfolio">Github Repo</a>
-
-## Detail
-To make this portfolio site, originally had considered static site generator like jekyll or hugo.
-But, It could be great opportunity to learn tech stuff if I choose to make this site from the scratch.
-Used vue.js for frontend, django for backend.
-Used AWS resources to serve this site.
+- **Situation**: As a fullstack engineer wanted to develop portfolio site from scratch.
+- **Task**: Make portfolio site and serve with AWS.
+- **Action**: Studied and used lots of AWS components to make this site.
+- **Result**: I can get interview opportunity double times after launching this site.
+- **Tech Stack**: Django, Vue.js, MariaDB, AWS (Lightsail (container), S3 (storage), Route 53 (domain)), Cloudflare (https), Bootstrap, CoreUI template
+- **Duration**: 1 member, 2 month
