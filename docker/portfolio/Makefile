@@ -3,7 +3,7 @@
 #
 .PHONY: all build run exec clean push
 
-VERSION = 1.3.0
+VERSION = 1.3.1
 BRANCH=master
 IMAGE_NAME = qtsky89/portfolio
 
