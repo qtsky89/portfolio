@@ -1,7 +1,7 @@
 version: "3"
 services:
     portfolio:
-        image: "qtsky89/portfolio:1.3.1"
+        image: "qtsky89/portfolio:1.4.0"
         ports:
             - "80:80"
         volumes:
@@ -9,6 +9,9 @@ services:
             - type: bind
               source: ./my_settings.py
               target: /home/irteam/apps/portfolio/django/django_project/my_settings.py
+        extra_hosts:
+        - "portfolio.wonhee.net:127.0.0.1"
+        - "portfoliob.wonhee.net:127.0.0.1"
 volumes:
     apache_logs:
         external: true

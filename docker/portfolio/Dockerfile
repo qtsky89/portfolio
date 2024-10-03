@@ -8,8 +8,6 @@ ARG BRANCH="master"
 # set workdir
 WORKDIR /home1/irteam
 
-RUN echo "127.0.0.1 portfolio.wonhee.net portfoliob.wonhee.net" >> /etc/hosts
-
 # copy apache conf file
 COPY httpd.conf /home1/irteam/apps/apache/conf/httpd.conf
 
