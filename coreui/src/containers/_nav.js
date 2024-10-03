@@ -63,6 +63,12 @@ export default [
         name: 'GitHub',
         href: 'https://github.com/Qtsky89',
         icon: 'cib-github'
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Tech Blog',
+        href: 'https://techblog.wonhee.net',
+        icon: 'cib-blogger'
       }
     ]
   }
