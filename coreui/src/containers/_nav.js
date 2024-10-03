@@ -68,7 +68,7 @@ export default [
         _name: 'CSidebarNavItem',
         name: 'Tech Blog',
         href: 'https://techblog.wonhee.net',
-        icon: 'cib-blogger'
+        icon: 'cib-dev-to'
       }
     ]
   }
