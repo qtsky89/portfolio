@@ -2,13 +2,13 @@
 <img src="https://wonhee-devops.s3.ap-northeast-2.amazonaws.com/devops_architecture.png" width="80%">
 
 ## Summary
-  - **Situation**: Naver search systems need constant care to maintain Naver's position as top IT company in Korea.
-  - **Task**: Develop and operate search services.
-  - **Action**: Since I was entering the Naver, developed Naver search services. Applied unit test, and e2e test for every pull request. Kept the code library updated with the latest version. Settled alarm and monitoring system and resolved the problem.
-  - **Result**: Always met deadlines and didn't have any major service failures.
-  - **Tech Stack**: Golang, C++, Apache module programming.
-  - **Duration**: 2015.12 ~ present, 1 member
-  - **Link**: [https://portfolio.wonhee.net/company/devops](https://portfolio.wonhee.net/company/devops)
+- **Situation**: To maintain its position as a leading IT company in Korea, Naver’s search system requires continuous enhancement and reliable operations.
+- **Task**: Develop and manage essential search services for Naver.
+- **Action**: Since joining the company, I’ve been responsible for developing and maintaining the Naver search services. I implemented unit and end-to-end tests for every pull request, kept the code library up to date, and established a robust alert and monitoring system to address issues promptly.
+- **Result**: Consistently meet deadlines with no major service failures.
+- **Tech Stack**: Golang, C++, Apache module programming.
+- **Duration**: 2015.12 ~ present
+- **Member**: 1
 
 ## Search logic that I'm in charge of
 * Post Search

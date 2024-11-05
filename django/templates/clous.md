@@ -2,12 +2,13 @@
 <img src="https://wonhee-clous.s3.ap-northeast-2.amazonaws.com/clous_architecture.png" width="80%">
 
 ## Summary
-- **Situation**: Naver search developers used physical servers to run search logic. Managing actions such as restoring failed servers, modifying replication, and adjusting server specifications demands a significant investment of time and energy.
-- **Task**: Make a platform that can make and run search service. And migrate from the old platform to the new one.
-- **Action**: As a fullstack engineer, developed various pages. (service create, service list, Helmchart management, node management, server setting, manager setting, LB setting, K8S event monitor) And settled CI/CD pipeline.
-- **Result**: Released v1.0.0 in 2023.10. And developed various feedback features. Currently 5 search services work as the production mode. More than 200 Naver search services will be migrated shortly. Cut every search developer's time by half because they don't have to submit form to get a new server or set up logging and monitoring system. Saved 30% of server costs by efficiency of cloud system.
-- **Tech Stack**: Kubernetes, Helmchart, Gin, Vue.js, GraphQL, MariaDB, Quasar, ArgoCD. Github action, Cypress.
-- **Duration**: 2017.04 ~ present, 15 members
+- **Situation**: Previously, Naver search developers relied on physical servers to deploy search logic, which required significant time and effort to manage, especially for tasks like server restoration.
+- **Task**: Build a platform to streamline the creation and management of search services, and migrate services from the legacy platform to the new one.
+- **Action**: As a fullstack engineer, I developed key features, including service creation, service listing, Helm chart management, node and server configuration, manager and load balancer settings, and set up the CI/CD pipeline.
+- **Result**: Launched v1.0.0 in October 2023, followed by ongoing feature enhancements based on user feedback. Currently, hundreds of services are running in production mode, with more Naver search services scheduled for migration soon. The platform has saved developers approximately 50% of their time by eliminating manual tasks like pysical server requests and setting up logging and monitoring systems.
+- **Tech Stack**: Kubernetes, Helmchart, Gin(Golang), Vue.js(Typescript), GraphQL, MariaDB, Quasar, ArgoCD. Github action, Cypress.
+- **Duration**: 2017.04 ~ present
+- **Member**: 15
 
 ## CI / CD that I made
 * CI

@@ -3,12 +3,13 @@
 
 
 ## Summary
-- **Situation**: Naver search engine team only offered a C++ library. To be more productive, I wanted to use other modern languages when making search logic that uses search engine's library.
-- **Task**: Wrap Naver search engine library, so search developers can leverage modern languages like Golang.
-- **Action**: Wrapped term extractor, synonym finder, and ebool parser. Changed automatic machine language type to Golang's slice and map. Set CI/CD pipeline. Maintained when new search engine features come out.
-- **Result**: There was no significant performance drop when changing from C++ to Go. Developers could make their search logic twice as fast as C++. More than a hundred Naver search services adopted this library. I announced this result at 2020 Naver's Engineering Day workshop.
+- **Situation**: The Naver search engine team only provided a C++ library, but I aimed to enable development in modern languages like Golang to improve productivity.
+- **Task**: Create a Golang wrapper for the Naver search engine library, allowing search developers to utilize Golang for search logic.
+- **Action**: Wrapped key components, including the term extractor, synonym finder, and ebool parser, and adapted automatic machine language types to Golang slice and map structures. Set up a CI/CD pipeline and continue maintaining the library as new search engine features are released.
+- **Result**: Achieved no significant performance drop when transitioning from C++ to Golang, allowing developers to create search logic twice as fast. Presented these results at Naver's Engineering Day workshop.
 - **Tech Stack**: Swig, Golang, C++
-- **Duration**: 2020.01.28 ~ present, 4 members
+- **Duration**: 2020.01.28 ~ present
+- **Member**: 4
 
 ## Engineering day presentation
 * Delivered a presentation on the topic of Go Search Library in 2020 Naver's Engineering Day workshop.
